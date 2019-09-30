@@ -33,7 +33,7 @@ script.on_event(defines.events.on_research_started, function(event)
 			if plyr.gui.top.skipresearch_tbl ~= nil then
 				plyr.gui.top.skipresearch_tbl.destroy()
 			end
-			plyr.gui.top.add{type="table", name="skipresearch_tbl", colspan=1}
+			plyr.gui.top.add{type="table", name="skipresearch_tbl", column_count=1}
 			plyr.gui.top.skipresearch_tbl.add{type="label", name="skipresearch_lbl", caption={"skip-research-label"}}
 			plyr.gui.top.skipresearch_tbl.add{type="flow", name="skipresearch_btns"}
 			plyr.gui.top.skipresearch_tbl.skipresearch_btns.add{type="button", name="skipresearch_yes", caption={"skip-research-yes"}}

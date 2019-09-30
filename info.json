@@ -1,11 +1,11 @@
 {
 	"name": "skipresearch",
-	"version": "0.0.4",
-	"factorio_version": "0.14",
+	"version": "0.1.0",
+	"factorio_version": "0.17",
 	"title": "SkipResearch",
 	"author": "PakL",
-	"contact": "pakl@paklweb.de",
+	"contact": "pakl@pakl.dev",
 	"homepage": "https://github.com/PakL/SkipResearch-Factorio",
 	"description": "A mod for Factorio that lets you skip researching. Just start a research and it finishes automatically.",
-	"dependencies": ["base >= 0.13.0"]
+	"dependencies": ["base >= 0.17.0"]
 }
