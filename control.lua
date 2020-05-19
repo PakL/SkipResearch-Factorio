@@ -2,6 +2,10 @@ local askagain = true
 local skipresearches = false
 
 script.on_event(defines.events.on_gui_click, function(event)
+	if game.players[event.player_index].force.current_research ~= nil then
+		return
+	end
+
 	if event.element.name == "skipresearch_yes" then
 		skipresearches = true
 		game.players[event.player_index].force.research_progress = 1
@@ -44,5 +48,13 @@ script.on_event(defines.events.on_research_started, function(event)
 	elseif skipresearches then
 		local event_research = event.research
 		event_research.force.research_progress = 1
+	end
+end)
+
+script.on_event(defines.events.on_research_finished, function(event)
+	for i,plyr in pairs(game.players) do
+		if plyr.gui.top.skipresearch_tbl ~= nil then
+			plyr.gui.top.skipresearch_tbl.destroy()
+		end
 	end
 end)
